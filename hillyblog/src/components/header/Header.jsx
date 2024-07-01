@@ -1,5 +1,5 @@
 import React from "react";
-import { Logo,Logoutbutton,  } from "../index";
+import { Container, Logo,Logoutbutton,  } from "../index";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -40,11 +40,12 @@ function Header() {
     },
   ];
   return (
-    <header className="p-3 shadow bg-slate-500">
+    <header className="p-3 ">
+      <Container >
 
       
-        <nav className="flex w-full ">
-          <div className="mr-4 ">
+        <nav className="flex w-full font-semibold ">
+          <div className="mr-4 font-bold ">
             <Link to="/">
               <Logo width="70px" />
             </Link>
@@ -71,7 +72,7 @@ function Header() {
         </nav>
         
       
-        
+        </Container> 
     </header>
   )
 }

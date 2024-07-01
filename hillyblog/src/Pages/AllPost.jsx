@@ -1,5 +1,5 @@
 import React from 'react'
-import {PostForm } from "../components"
+import {Container, PostForm } from "../components"
 
 import appwriteService from "../appwrite/config"
 
@@ -14,6 +14,7 @@ function AllPost() {
     })
   return (
     <div className='w-full py-8'>
+        <Container>
         
             <div className='flex flex-wrap'>
                 {posts.map((post) => (
@@ -22,6 +23,7 @@ function AllPost() {
                     </div>
                 ))}
             </div>
+            </Container>
             
     </div>
   )

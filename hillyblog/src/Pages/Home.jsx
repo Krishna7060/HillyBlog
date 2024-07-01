@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {PostForm,Postcard} from '../components'
+import {Container, PostForm,Postcard} from '../components'
 
 import appwriteService from "../appwrite/config"
 import { useNavigate,  useParams } from 'react-router-dom';
@@ -18,7 +18,7 @@ function Home() {
     if (posts.length === 0) {
         return (
             <div className="w-full py-8 mt-4 text-center">
-                
+                <Container>
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
                             <h1 className="text-2xl font-bold hover:text-gray-500">
@@ -26,6 +26,8 @@ function Home() {
                             </h1>
                         </div>
                     </div>
+                    </Container>
+                
                 
             </div>
         )
